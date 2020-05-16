@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <!-- Bootstrap CDN-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Covid-19</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">Nedir ?</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#turkey">Türkiye Verileri</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#world">Dünya Verileri</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#protect">Korunmak İçin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#news">Haberler</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="page">
+        <div id="about">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://www.gau.edu.tr/storage//uploads/0/0/0/coronavirus-cdc-1585869759.jpg?vs=1" alt="virus-image" class="img-thumbnail" id="virusImage">
+                </div>
+                <div class="col-md-8">
+                    <h3 class="title">Covid-19 Nedir ?</h3>
+                    <p class="text">
+                        Yeni Koronavirüs Hastalığı (COVID-19), ilk olarak Çin’in Vuhan Eyaleti’nde Aralık ayının sonlarında solunum yolu belirtileri (ateş, öksürük, nefes darlığı) gelişen bir grup hastada yapılan araştırmalar sonucunda 13 Ocak 2020’de tanımlanan bir virüstür.
+
+                        Salgın başlangıçta bu bölgedeki deniz ürünleri ve hayvan pazarında bulunanlarda tespit edilmiştir. Daha sonra insandan insana bulaşarak Vuhan başta olmak üzere Hubei eyaletindeki diğer şehirlere ve Çin Halk Cumhuriyeti’nin diğer eyaletlerine ve diğer dünya ülkelerine yayılmıştır.
+
+                        Koronavirüsler, hayvanlarda veya insanlarda hastalığa neden olabilecek büyük bir virüs ailesidir. İnsanlarda, birkaç koronavirüsün soğuk algınlığından Orta Doğu Solunum Sendromu (MERS) ve Şiddetli Akut Solunum Sendromu (SARS) gibi daha şiddetli hastalıklara kadar solunum yolu enfeksiyonlarına neden olduğu bilinmektedir. Yeni Koronavirüs Hastalığına SAR-CoV-2 virüsü neden olur.
+                    </p>
+                </div>
+            </div>
+            <div class="row part">
+                <div class="col-md-6">
+                    <h3 class="title">Belirtileri nelerdir ?</h3>
+                    <p class=text>
+                        Belirtisiz olgular olabileceği bildirilmekle birlikte, bunların oranı bilinmemektedir. En çok karşılaşılan belirtiler ateş, öksürük ve nefes darlığıdır. Şiddetli olgularda zatürre, ağır solunum yetmezliği, böbrek yetmezliği ve ölüm gelişebilmektedir.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="title">Nasıl bulaşır ?</h3>
+                    <p class=text>
+                        Hasta bireylerin öksürmeleri aksırmaları ile ortama saçılan damlacıkların solunması ile bulaşır. Hastaların solunum parçacıkları ile kirlenmiş yüzeylere dokunulduktan sonra ellerin yıkanmadan yüz, göz, burun veya ağıza götürülmesi ile de virüs alınabilir. Kirli ellerle göz, burun veya ağıza temas etmek risklidir.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="turkey" >
+            <div class="row part">
+                <div class="col-12" id="turkeyTitle">
+                    <h3 class="title">Türkiye Anlık Veriler</h3>
+                    <h6 class="date"><i>16.05.2020</i></h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Yeni Vaka</h4>
+                            <p class="card-text" id="newCases"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Yeni Vefat</h4>
+                            <p class="card-text" id="newDeaths"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Toplam Vaka</h4>
+                            <p class="card-text" id="totalCases"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Toplam Vefat</h4>
+                            <p class="card-text" id="totalDeaths"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="world">
+            <div class="row part">
+                <div class="col-12" id="worldTitle">
+                    <h3 class="title">Dünya Anlık Veriler</h3>
+                    <h6 class="date"><i>16.05.2020</i></h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Toplam İyileşen</h4>
+                            <p class="card-text" id="worldTotalRecovered"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Toplam Vaka</h4>
+                            <p class="card-text" id="worldTotalCases"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Toplam Vefat</h4>
+                            <p class="card-text" id="worldTotalDeaths"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="protect">
+            <div class="row part">
+                <div class="col-12">
+                    <h3 class="title">Korunma yolları nelerdir ?</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            El temizliğine dikkat edilmelidir. Eller en az 20 saniye boyunca sabun ve suyla yıkanmalı, sabun ve suyun olmadığı durumlarda alkol bazlı el antiseptiği kullanılmalıdır. Antiseptik veya antibakteriyel içeren sabun kullanmaya gerek yoktur, normal sabun yeterlidir.
+                        </li>
+                        <li class="list-group-item">
+                            Eller yıkanmadan ağız, burun ve gözlerle temas edilmemelidir.
+                        </li>
+                        <li class="list-group-item">
+                            Hasta insanlarla temastan kaçınmalıdır (mümkün ise en az 1 m uzakta bulunulmalı).
+                        </li>
+                        <li class="list-group-item">
+                            Özellikle hasta insanlarla veya çevreleriyle doğrudan temas ettikten sonra eller sık sık temizlenmelidir
+                        <li class="list-group-item">
+                            Hastaların yoğun olarak bulunması nedeniyle mümkün ise sağlık merkezlerine gidilmemeli, sağlık kuruluşuna gidilmesi gereken durumlarda diğer hastalarla temas en aza indirilmelidir.
+                        </li>
+                        <li class="list-group-item">
+                            Öksürme veya hapşırma sırasında burun ve ağız tek kullanımlık kağıt mendil ile örtülmeli, kağıt mendilin bulunmadığı durumlarda ise dirsek içi kullanılmalı, mümkünse kalabalık yerlere girilmemeli, eğer girmek zorunda kalınıyorsa ağız ve burun kapatılmalı, tıbbi maske kullanılmalıdır.
+                        </li>
+                        <li class="list-group-item">
+                            Çiğ veya az pişmiş hayvan ürünleri yemekten kaçınılmalıdır. İyi pişmiş yiyecekler tercih edilmelidir.
+                        </li>
+                        <li class="list-group-item">
+                            Çiftlikler, canlı hayvan pazarları ve hayvanların kesilebileceği alanlar gibi genel enfeksiyonlar açısından yüksek riskli alanlardan kaçınılmalıdır.
+                        </li>
+                        <li class="list-group-item">
+                            Seyahat sonrası 14 gün içinde herhangi bir solunum yolu semptomu olursa maske takılarak en yakın sağlık kuruluşuna başvurulmalı, doktora seyahat öyküsü hakkında bilgi verilmelidir.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="news" class="part">
+            <h3 class="title">Haberler</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://i4.hurimg.com/i/hurriyet/75/750x422/5ebf9ed22269a213a87ed4a2.jpg" class="img-thumbnail" alt="newsImage">
+                </div>
+                <div class="col-md-8">
+                    <h5 class="newsTitle">Rusya salgında dikkat çeken sayıları açıkladı.</h5>
+                    <p class="text">
+                        Rusya’da 16 Mayıs 2020 itibariyle 9 bin 200 kişide daha koronavirüs (Covid-19) tespit edildi. Ülkede toplam vaka sayısı 272 bin 43’e yükseldi.
+                        Rusya Koronavirüs Enfeksiyonu Kontrol ve Önleme Merkezinden yapılan açıklamaya göre, son 24 saatte 9 bin 200 kişide daha Kovid-19 tespit edilmesiyle vaka sayısı 272 bin 43’e çıktı.
+                        Mayıs ayının başından bu yana günlük vaka sayısı 10 bin civarında olan ülkede, ölü sayısı 119 artarak 2 bin 537’ye, iyileşen sayısı 4 bin 940 artarak 63 bin 166’ya ulaştı. 
+                        Vaka sayısında günlük artış oranı yüzde 4,2’den yüzde 3,5’e düşen Rusya’da, salgının başlangıcından bu yana en düşük vaka artış oranı gerçekleşti. Ülkede yeni vakaların yüzde 44,8’inde semptom görülmediği kaydedildi.  
+                        Salgının merkezi durumundaki başkent Moskova'da vaka sayısı 3 bin 505 artarak 138 bin 969’a, ölü sayısı 74 artarak 1432’ye yükseldi.
+                        Şehirde toplam 26 bin 32 kişinin sağlığına kavuştuğu ifade edildi.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://www.trthaber.com/resimler/410000/410675.jpg" class="img-thumbnail" alt="newsImage">
+                </div>
+                <div class="col-md-8">
+                    <h5 class="newsTitle">İçişleri Bakanlığı'ndan 81 ilde dev uygulama! 51 bin 885 personel katıldı.</h5>
+                    <p class="text">
+                        İçişleri Bakanlığı ülke genelinde eş zamanlı “Türkiye Güven Huzur Uygulaması” gerçekleştirdi. Denetimlerde; sosyal mesafe kuralını ihlalden 2 bin 701, sokağa çıkma kısıtlamasına tabi 20 yaş altı bin 479 ve 65 yaş ve üzeri 188 olmak üzere toplam 4 bin 368 kişiye idari ya da adli işlem uygulandı. Koronavirüs tedbirleri kapsamında alınan kararları ihlal eden, bin 42 toplu taşımaya, 151 ticari taksiye ve 4 bin 638 diğer araçlar olmak üzere toplam 5 bin 831 araç sürücüsüne/ sahibine para cezası verildi. Süresiz kapatılma kuralını ihlal eden 68, belirlenen çalışma saatleri dışında faaliyet yürüten 25 ve sosyal mesafe kuralını uygulamayan 98 olmak üzere toplam 191 iş yeri sahibine/ işletmecisine idari ve adli işlem gerçekleştirildi.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://i4.hurimg.com/i/hurriyet/75/750x422/5ebfd1a02269a213a87ed5f8.png" class="img-thumbnail" alt="newsImage">
+                </div>
+                <div class="col-md-8">
+                    <h5 class="newsTitle">Uşak'ta 26 berberin corona virüs testi pozitif çıktı.</h5>
+                    <p class="text">
+                        UŞAK'ta, 26 berberin corona virüs(Covid-19) testi pozitif çıktı. Berberler, tedaviye alındı.
+                        Corona virüsle mücadele kapsamında 21 Mart'ta kapatılan berber ve kuaförler, 11 Mayıs'ta yeniden hizmete başladı. Uşak Valiliği, kentte hizmet veren 421 berber ve kuaförü, yeniden açılmadan önce Covid-19 testi yaptırmaya çağırdı. Berberlerden çoğunluğu test yaptırdı.
+                        Yapılan testler sonucunda 26 berberin Covid-19 testi pozitif çıktı. Berberler, tedaviye alındı.
+                        Bazı berberlerin ise sağlıklarının iyi olduğunu söyleyerek test yaptırmadığı, kendilerini evlerinde izole ettiği ve dükkanlarını açmayacaklarını bildirdikleri öğrenildi.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://i4.hurimg.com/i/hurriyet/75/750x422/55ea26d9f018fbb8f86e62bf.jpg" class="img-thumbnail" alt="newsImage">
+                </div>
+                <div class="col-md-8">
+                    <h5 class="newsTitle">Prof. Dr. Nesrin Özören'den heyecanlandıran açıklama: Yakında başlıyoruz.</h5>
+                    <p class="text">
+                        Boğaziçi Üniversitesi Moleküler Biyoloji ve Genetik Bölümü Öğretim Üyesi Prof. Dr. Nesrin Özören koronavirüs aşısı çalışmalarında, "Bir takım hücre deneylerinde başarılı olduk. Yakında da hayvan deneylerine geçeceğiz" dedi.
+                        Prof. Dr. Nesrin Özören, üniversitenin düzenlendiği etkinlikte koronavirüs aşısı çalışmalarında gelinen noktayı anlattı.
+                        Özören, "Korona aşısı projemizde ASC zerreciklerinden aşı teknolojisini kullanalım dedik. Bu daha önce hiç kimsenin denemediği bir aşı teknolojisi.
+                        Umarım biz değişik bir başarı elde edebiliriz. ASC proteini bazı yangı mekanizmalarını denetleyen bir protein. İlginç bir yapı, hücreye bir patojen ya da mikrop geldiğinde tetiklenen bir kompleks oluşturuyor.
+                        Mikrokürecik yapısı muntazam bir yapı ve biz dedik ki bu yapıya, istediğimiz mikroplara ait ögeler koyalım ve taşıyıcı olarak kullanalım. Normal hücrede aktifleşmesi gerekirken, bunu biz hücre kültüründe kendimiz aktifleştirelim, üzerine mikrop varmışçasına başka ögeler ekleyelim dedik. Ve bunu başardık" dedi. 
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://ichef.bbci.co.uk/news/410/cpsprodpb/16863/production/_110695229_vaccine.jpg" class="img-thumbnail" alt="newsImage">
+                </div>
+                <div class="col-md-8">
+                    <h5 class="newsTitle">ABD ile Fransa arasında aşı krizi: "Kabul edilemez".</h5>
+                    <p class="text">
+                        Fransa merkezli ilaç şirketi Sanofi'nin, olası bir koronavirüs aşısını ilk olarak ABD'ye satacağını açıklamasının ardından Fransa hükümeti sert tepki gösterdi.Fransa merkezli ilaç firması Sanofi'nin "Olası bir aşı ilk ABD'lilere satılacak" açıklamasının ardından Fransız hükümetinden sert tepki geldi.Fransa'da Ekonomi İşlerinden Sorumlu Bakan Agnes Pannier-Runacher, bu durumun ‘kabul edilemez’ olduğunu belirtti.AFP'nin haberine göre Pannier-Runacher, "Mali nedenlerden dolayı herhangi bir ülkeye imtiyaz sağlanması kabul edilemez" dedi.Pannier-Runacher "Sanofi’nin yöneticisi, aşının her ülkeye ve elbette, üretim tesisleri burada olduğu için Fransa’ya da sağlanacağına dair bana onay verdi" diye devam etti.Sanofi'nin Yönetim Kurulu Başkanı Paul Hudson, koronavirüs aşısının önce ABD'lilere verilmesi konusunda bir ön anlaşma imzaladıklarını duyurmuştu. Hudson, "ABD hükümeti yatırım yaptığı için ön siparişte de en büyük hakka sahip" demişti.
+                        ABD'nin Biyomedikal İleri Araştırma ve Geliştirme Kurumu da (BARDA) araştırmalara yatırımları nedeniyle Sanofi önceliği ABD’ye vermek istiyor.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center py-1 bg-dark" id="footer">
+        <p> © 2020 Copyright: <a href="https://osmanerol.cf" class="footerA">Osman Erol</a></p>
+    </div>
+     
+    <!-- Javascript-->
+    <script src="index.js"></script>
+</body>
+</html>
